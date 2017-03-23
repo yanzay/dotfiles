@@ -30,6 +30,7 @@ set vb
 set expandtab
 set cursorline
 set cursorcolumn
+set t_vb=
 
 set tabstop=2
 set shiftwidth=2
@@ -38,10 +39,13 @@ set softtabstop=2
 let $GOPATH="/home/yanzay/go"
 
 let g:go_fmt_command = "goimports"
-" let g:go_highlight_functions = 1
-" let g:go_highlight_methods = 1
-" let g:go_highlight_structs = 1
-" let g:go_fmt_fail_silently = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
 if has('nvim')
   let g:deoplete#enable_at_startup = 1
 else
