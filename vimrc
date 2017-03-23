@@ -1,5 +1,5 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
+filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -36,8 +36,6 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
-let $GOPATH="/home/yanzay/go"
-
 let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
@@ -58,8 +56,6 @@ map <F2> :NERDTreeToggle<CR>
 map <D-p> :CtrlP<CR>
 inoremap <D-CR> <ESC>o
 inoremap <D-S-CR> <ESC>O
-
-" set lines=999 columns=9999
 
 au BufNewFile,BufRead *.jbuilder set ft=ruby
 
