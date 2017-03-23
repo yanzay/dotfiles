@@ -91,6 +91,7 @@ export TERM=st-256color
 
 export GOPATH=/home/yanzay/go
 export PATH=$PATH:/home/yanzay/go/bin
+export EDITOR=vim
 
 alias osmc='ssh osmc@yanzay.com -p 2222'
 export PATH="$HOME/.rbenv/bin:$PATH"
