@@ -6,12 +6,17 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fatih/vim-go'
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'zchee/deoplete-go'
+if has('nvim')
+  Plugin 'Shougo/deoplete.nvim'
+  Plugin 'zchee/deoplete-go'
+else
+  Plugin 'Shougo/neocomplete.vim'
+endif
 call vundle#end()            " required
 
 filetype plugin indent on    " required
@@ -37,6 +42,11 @@ let g:go_fmt_command = "goimports"
 " let g:go_highlight_methods = 1
 " let g:go_highlight_structs = 1
 " let g:go_fmt_fail_silently = 1
+if has('nvim')
+  let g:deoplete#enable_at_startup = 1
+else
+  let g:neocomplete#enable_at_startup = 1
+endif
 
 let NERDTreeChDirMode=2
 map <C-r> :e ~/.vimrc<CR>
