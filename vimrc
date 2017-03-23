@@ -12,7 +12,7 @@ Plugin 'bling/vim-airline'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'flazz/vim-colorschemes'
 if has('nvim')
-  Plugin 'Shougo/deoplete.nvim'
+  Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   Plugin 'zchee/deoplete-go'
 else
   Plugin 'Shougo/neocomplete.vim'
