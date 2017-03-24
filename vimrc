@@ -57,5 +57,7 @@ map <D-p> :CtrlP<CR>
 inoremap <D-CR> <ESC>o
 inoremap <D-S-CR> <ESC>O
 
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
 au BufNewFile,BufRead *.jbuilder set ft=ruby
 
