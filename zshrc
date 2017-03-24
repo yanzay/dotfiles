@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/yanzay/.oh-my-zsh
+  export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -89,8 +89,7 @@ alias yanzay='ssh yanzay@yanzay.com -t "tmux a"'
 
 export TERM=st-256color
 
-export GOPATH=/home/yanzay/go
-export PATH=$PATH:/home/yanzay/go/bin
+export PATH=$PATH:~/go/bin
 export EDITOR=vim
 
 alias osmc='ssh osmc@yanzay.com -p 2222'
