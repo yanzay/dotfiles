@@ -19,6 +19,8 @@ if has('nvim')
 else
   Plugin 'Shougo/neocomplete.vim'
 endif
+Plugin 'moll/vim-node'
+Plugin 'mephux/vim-jsfmt'
 call vundle#end()            " required
 
 filetype plugin indent on    " required
@@ -45,6 +47,9 @@ let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
+let g:js_fmt_autosave = 1
+let g:js_fmt_command = "jsfmt"
 
 if has('nvim')
   let g:deoplete#enable_at_startup = 1
